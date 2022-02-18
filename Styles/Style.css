@@ -50,7 +50,7 @@ input#menu-bar~ul{
     background-color: var(--main-color);
     width: 100%;
     list-style: none;
-    height: 35%;
+    height: 50%;
     position: absolute;
     right: 100%;
     transition: all 300ms linear;
