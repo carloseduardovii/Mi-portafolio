@@ -8,130 +8,161 @@
 *{
     box-sizing: border-box;
     margin: 0;
- 
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body{
     background-color: var(--main-color);
     font-family: monserrat, sans-serif;
+    /* background-image: url(/Mi_Portafolio/assets/Photo/IMG_20210731_182544.jpg);
+    object-fit: cover; */
 }
 
 /* MENU */
-/* Definiendo caracteristicas del menu-bar */
+
 nav{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: .5rem 1rem;
-    height: 50px;
-}
-/*Dando tamaño al icono del menu-bar*/
-nav>div img{
-    width: 2rem;
+    padding: .5rem 1.25rem;
+    background-color: transparent;
 }
 
-/* ocultando Check box */
+#menu{
+    align-items: center;
+    margin-top: -10px;
+}
+
+nav>div img{    
+    width: 2rem;
+    margin-top: 10px;
+}
+
 input#menu-bar{
     visibility: hidden;
 }
-/* Creando menu-bar */
+
 input#menu-bar~ul{
     background-color: var(--main-color);
-    opacity: .5;
     width: 100%;
     list-style: none;
-    height: 100%;
+    height: 35%;
     position: absolute;
     right: 100%;
-    transition: all 0.5s linear;
-    text-align: center;
-   
-}
-/* Estilando lista de menu-bar */
-input#menu-bar~ul>li>a{
-    color: var(--fontparagragh-color);
-    height: 50px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    line-height: 40px;
-    padding: 1rem;
+    transition: all 300ms linear;
+    z-index: 10;
+    
 }
 
 input#menu-bar:checked~ul{
     right: 0;
 }
 
-ul>li:hover{
-    cursor: pointer;
-    border-bottom: 3px solid #34b0be;
-    text-decoration: aqua;
-    
+#menu>ul li{
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+#menu>ul li a{
+    width: 100%;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 1rem;
+    border-bottom: 2px solid #34B0BE;
+    box-shadow: 1px 5px 5px rgb(0, 0, 0, .3);
 }
 
+
 /* ABOUT SECTION*/
-/* Definiendo parametros del contenedor my-name */
 #about-section{
     display: flex;
+    justify-content: space-around;
     padding: 1.25rem;
 }
 #about-section .my-name{
+    display: flex;
+    width: 100%;
+    padding: 5px;
     position: absolute;
+    flex-direction: column;
+    margin-top: 1rem;
 
 }
+section>div .my-name{
+    justify-items: flex-start;
+}
 
-/* Estilando caligrafía */
 #about-section p{
     color:var(--fontparagragh-color);
     font-size: 25px;
-    margin-bottom: 10px;   
+    margin-left: 10px;
+    margin-bottom: 10px; 
 }
 #about-section h1{
     color:var(--fontitle-color);
-    font-size: 35px;
+    font-size: 2em;
+    margin-left: 10px;
     margin-bottom: 10px;
 }
 #about-section h3{
     color:var(--fontparagragh-color);
     opacity: .7;
-    margin-top: -10px;
+    margin-left: 10px;
+    margin-top: -20px;
     margin-bottom: 10px;
 }
 #about-section h3+p{
     color:var(--fontparagragh-color);
     font-size: 18px;
+    margin-left: 10px;
     opacity: .8; 
 }
 #about-section img{
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    margin-left: 20%;
     border-image-width: 20px;
-}
-.social-icon{
-    background-color: var(--accet-color);
-    padding: 10px;
-    width: 150px;
-    border-radius: 10px;
-    opacity: .8;
-    
-}
-.social-icon>.icon{
-    
-
-
-    /* margin-right: 1rem; */
-    width: 24px;
+    object-fit: cover;
+    border: 3px solid #242e44;
+    box-shadow: -3px 7px 14px 20px rgb(0, 0, 0, .3);
 }
 
+/* ICONOS*/
+#social-icon{
+    background-color: #D1CECA;
+    opacity: .7;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: -20px; 
+}
 
-/* Definiendo parametros del contenedor about-me */
+.icon-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.icon-wrapper img{
+    background-color: #FFFFFF;
+    border-radius: 3px;
+    padding: 5px;
+    width: 80px;
+    height: 40px;
+}
+
 #about-me{
     display: flex;
     padding: 1rem;
     text-align: center;
+    margin-top: 20px;
 }
 
 #about-me h4{
@@ -148,9 +179,7 @@ ul>li:hover{
     line-height: 25px;
 }
 
-
 /*SERVICES*/
-
 #services-section{
     text-align: center;
     margin-bottom: 20px;
@@ -161,6 +190,7 @@ ul>li:hover{
     font-size: 25px;
     font-weight: 400;
     text-align: center;
+    margin-top: 20px;
     margin-bottom: 20px;  
 }
 
@@ -168,6 +198,7 @@ ul>li:hover{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 #services-section img{
@@ -183,6 +214,7 @@ ul>li:hover{
     padding: .5rem;
     border-radius: 5px;
 }
+
 #services-section .marketing{
     width: 100px;
     height: 130px;
@@ -190,6 +222,7 @@ ul>li:hover{
     padding: .5rem;
     border-radius: 5px;
 }
+
 #services-section .research{
     width: 100px;
     height: 130px;
@@ -209,49 +242,513 @@ ul>li:hover{
     text-align: center;
 }
 
-/* SKILLS */
+
+/* STUDIES */
+#studies-section h4{
+    color: var(--fontitle-color);
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#studies-section .colleges{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.colleges img{
+    width: 140px;
+    height: 120px;
+    padding: .5rem;
+    border-radius: 20px;
+}
 
 
+/* PROYECTS */
+#proyects-section h4{
+    color: var(--fontitle-color);
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
-  
+#proyects-section .proyects{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#proyects-section>div img{
+    width: 170px;
+    padding: .5rem;
+   
+}
 
 
+/* CONTACT */
+#contact-section{
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+#contact-section h4{
+    color: var(--fontitle-color);
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#contact-section .icons-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#contact-section .icon-phone{
+    background-color: var(--fontparagragh-color);
+    width: 150px;
+    height: 130px;
+    padding: .5rem;
+    border-radius: 5px;
+
+}
+
+#contact-section h5{
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#contact-section .icon-phone p{
+    font-size: 16px;
+    color: #918e8b;
+    text-align: center;
+}
+
+#contact-section .icon-email{
+    background-color: var(--fontparagragh-color);
+    width: 150px;
+    height: 130px;
+    padding: .5rem;
+    border-radius: 5px;
+
+}
+
+#contact-section .icon-email p{
+    font-size: 10px;
+    color: #918e8b;
+    text-align: center;
+}
 
 
+/* FOOTER */
+footer{
+    display: flex;
+    background-color: #242e44;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
 
+}
 
+footer h5{
+    color: var(--fontitle-color);
+    font-size: 16px;
+    font-weight: 600;
+}
 
+footer>h5 img{
+    width: 18px;
+}
 
+body>section button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    padding: 5px;
+    margin-top: 30px;
+    margin-left: 80%;
+    background-color: var(--main-color);
+    box-shadow: 1px 5px rgb(0, 0, 0, .3);
+   
+}
 
+body>section a{
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--fontitle-color);
 
-@media only screen and (min-width: 768px) {
+    
+   
+   
+}
+
+@media only screen and (min-width: 720px) {
+
+    /* MENU*/
     label{
         display: none;
     }
-    
-    input#menu-bar{
+
+    input#menu-bar~ul{
         position: static;
+        background-color: transparent;
+        display: inline-flex;
     }
+
+    input#menu-bar~ul>li a{
+        font-size: 12px;
+    }
+
+    input#menu-bar~ul>li a:hover{
+        background-color: #34B0BE;
+        box-shadow: 1px 5px rgb(0, 0, 0, .3);
+        transition: all .5s;
+        border-radius: 3px;
+    }
+
+   /* ABOUT SECTION */
+    #about-section{
+        width: 100%;
+        margin-top: 2rem;
+    } */
+
+    .my-name{
+        width: 100%;
+        padding: 2.5rem;
+        margin-top: 1.5rem;
+            
+    }
+
+    #about-section .soy{
+        font-size: 2rem;
+        margin-left: 30px;
+    }
+
+    #about-section h1{
+        font-size: 3rem;
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
+
+    #about-section h3{
+        font-size: 1.5rem;
+        margin-left: 30px;
+    }
+
+    #about-section .profession{
+        font-size: 1.5rem;
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+
+    #about-section .profession span{
+        color: gold;
+    }   
+
+    #about-section img{
+        width: 300px;
+        height: 300px;
+    }
+
+    #about-me h4{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    #about-me p{
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    #services-section h4{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    } 
+    
+    #studies-section h4{
+        font-size: 2rem;
+        margin-top: 3rem;
+    } 
+
+    #proyects-section h4{
+        font-size: 2rem;
+        margin-top: 2rem;
+    } 
+
+    #contact-section h4{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+
+    /* SERVICES */
+
+    #services-section img{
+        width: 70px;
+        margin-bottom: 5px;
+        margin-top: 10px;
+    }
+    
+    #services-section .design{
+        background-color: #FFFFFF;
+        width: 170px;
+        height: 220px;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+    
+    #services-section .marketing{
+        background-color: #FFFFFF;
+        width: 170px;
+        height: 220px;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+    
+    #services-section .research{
+        background-color: #FFFFFF;
+        width: 170px;
+        height: 220px;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+    
+    #services-section h5{
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    #services-section p{
+        font-size: 15px;
+        color: var(--accet-color);
+        text-align: center;
+    }
+
+
+    /* STUDIES */
+
+    .colleges img{
+        width: 180px;
+        height: 160px;
+        padding: .5rem;
+        border-radius: 20px;
+    }
+
+
+    /* PROYECTS */
+
+    #proyects-section>div img{
+        width: 370px;
+        height: auto;
+        padding: 1rem;
+    }
+
+    /* CONTACT */
+    #contact-section .icon-phone{
+        width: 180px;
+        height: 150px;
+    }
+    
+    #contact-section h5{
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    #contact-section .icon-phone p{
+        font-size: 16px;
+        color: #918e8b;
+        text-align: center;
+    }
+    
+    #contact-section .icon-email{
+        width: 180px;
+        height: 150px;
+    }
+    
+    #contact-section .icon-email p{
+        font-size: 12px;
+    }
+
+    .icons-section>div img{
+        margin-top: 10px;
+    }
+
 }
 
+@media only screen and (min-width: 1024px){
+    /* MENU*/
+    input#menu-bar~ul>li a{
+        font-size: 16px;
+    }
+    /* ABOUT SECTION */
+    #about-section .soy{
+        font-size: 2.5rem;
+        margin-left: 50px;
+    }
+    #about-section h1{
+        font-size: 3.5rem;
+        margin-left: 50px;
+    }
+    #about-section h3{
+        font-size: 2rem;
+        margin-top: -30px;
+        margin-left: 50px;
+    }
+    #about-section .profession{
+        font-size: 2.5rem;
+        margin-left: 50px;
+    }
+      
+    #about-section img{
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+       
+    }
+    #about-me h4{
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    #about-me p{
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    #services-section h4{
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    } 
+
+    #studies-section h4{
+        font-size: 2.5rem;
+        margin-top: 3rem;
+    } 
+    #proyects-section h4{
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    } 
+    #contact-section h4{
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    /* ICONOS*/
+    #social-icon{
+        padding: 1.5rem;
+        margin-left: 20px;
+        margin-right: 20px; 
+    }
+
+    .icon-wrapper img{
+        background-color: #FFFFFF;
+        border-radius: 3px;
+        padding: 5px;
+        width: 100px;
+        height: 60px;
+    }
+
+    #about-me p{
+        font-size: 24px;
+    
+    }
+    
+    /*SERVICES*/
+
+
+    #services-section img{
+        width: 90px;
+        margin-bottom: 5px;
+        margin-top: 10px;
+    }
+
+    #services-section .design{
+        width: 210px;
+        height: 270px;
+    }
+
+    #services-section .marketing{
+         width: 210px;
+        height: 270px;
+    }
+
+    #services-section .research{
+         width: 210px;
+        height: 270px;
+    }
+
+    #services-section h5{
+        font-size: 24px;
+    }
+    #services-section p{
+        font-size: 18px;
+       
+    }
+
+    /* STUDIES */
+    #studies-section .colleges{
+        padding: 1.5rem;
+     
+    }
+
+    .colleges img{
+        width: 260px;
+        height: 240px;
+        padding: 1rem;
+        
+    }
+
+    /* PROYECTS */
+
+    #proyects-section>div img{
+        width: 550px;
+        padding: .5rem;
+    }
+
+    /* CONTACT */
+
+    .icon-phone img{
+        width: 60px;
+    }
+    #contact-section .icon-phone{
+        width: 250px;
+        height: 230px;
+    }
+    
+    #contact-section h5{
+        font-size: 26px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    #contact-section .icon-phone p{
+        font-size: 24px;
+        
+    }
+    .icon-email img{
+        width: 60px;
+    }
+    #contact-section .icon-email{
+        width: 250px;
+        height: 230px;
+
+    }
+
+    #contact-section .icon-email p{
+        font-size: 18px;
+    }
+
+}

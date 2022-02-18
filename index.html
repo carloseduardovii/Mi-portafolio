@@ -8,53 +8,60 @@
     <link rel="stylesheet" href="./Styles/Style.css">
 </head>
 <body>
-    <nav>    
-        <div>
+    <nav id="top">    
+        <div id="menu">
             <input type="checkbox" id="menu-bar">
             <label for="menu-bar">
                 <img src="./Portafolio 4/íconos/menu 1.svg" alt="">
             </label>
             <ul>
-                <li><a class="active">Home</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Acerca de mí</a></li>
-                <li><a href="#">Mis habilidades</a></li>
-                <li><a href="#">Mi portafolio</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="#about-section">Home</a></li>
+                <li><a href="#acerca-de-mi">Acerca de mí</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#estudios">Estudios</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </div>
     </nav>
+
     <section id="about-section">
         <div class="my-name" >    
-            <p>Soy</p>
-            <h1>Carlos<br>Eduardo</h1>
+            <p class="soy">Soy</p>
+            <h1 id="home">Carlos<br>Eduardo</h1>
             <h3>_____________</h3>
-            <p>Web full Stack Designer</p>
+            <p class="profession"><span>W</span>eb <span>F</span>ull <span>S</span>tack <span>P</span>rogramer</p>
         </div>
     
-        <img src="./assets/IMG-20191014-WA0027.jpg" alt="">
-
+    <img src="./assets/Photo/IMG-20191014-WA0027.jpg" alt="">
     </section>
 
-       <div class="social-icon">
-           <img class="icon" src="./Portafolio 4/íconos/cib_linkedin-in.svg" alt="">
-           <img class="icon" src="./Portafolio 4/íconos/ant-design_instagram-filled.svg" alt="">
-           <img class="icon" src="./Portafolio 4/íconos/ant-design_twitter-outlined.svg" alt="">
+    <section id="social-icon">
+       <div class="icon-wrapper">
+            <div>
+                <img class="img-linkedIn" src="./Portafolio 4/íconos/cib_linkedin-in.svg" alt="">
+            </div>
+            <div>
+                <img class="img-instagram" src="./Portafolio 4/íconos/ant-design_instagram-filled.svg" alt="">
+            </div>    
+            <div>
+                <img class="img-Twitter" src="./Portafolio 4/íconos/ant-design_twitter-outlined.svg" alt="">
+            </div>
        </div> 
-
+    </section>
     
 
     <section id="about-me">    
-        <div">
-            <h4>Acerca de mí</h4>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus voluptates adipisci ea porro enim similique nulla quasi, recusandae dicta! Sed, facere corrupti optio vitae ut sit unde repudiandae quos. Vel.</p>
+        <div>
+            <h4 id="acerca-de-mi">Acerca de mí</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus nesciunt totam, tempora quibusdam sapiente consequuntur fugit esse architecto. Reprehenderit laborum minima repellat autem! Suscipit, ad sapiente possimus facere dolor enim cumque dolorum cum nostrum deleniti velit corrupti pariatur rerum consequuntur facilis commodi voluptates totam earum, beatae soluta odit, neque ullam.</p>
         </div>
 
     </section>
     
     <section id="services-section">
         <div>
-            <h4>Servicios</h4>
+            <h4 id="servicios">Servicios</h4>
         </div>
         <div class="my-services">
             <div class="design">
@@ -72,32 +79,62 @@
                 <h5>Research</h5>
                 <p>Desde diseño hasta implementación del desarrollo</p>
             </div>
-        </div>    
+            
+        </div>
+        <button><a href="#top">Volver</a></button>
     </section> 
 
-    <section id="skills-section">   
-        <div id="skills">
-            <h4>Mis habilidades</h4>
+    <section id="studies-section">   
+        <div>
+            <h4 id="estudios">Estudios</h4>
         </div>
-    </section>    
-        <div id="proyects">
-            <h4>Mi portafolio</h4>
+        <div class="colleges">
+            <img src="./assets/Educacion/Logo Poli.jpg" alt="">
+            <img src="./assets/Educacion/Logo tech.jpg" alt="">
+            <img src="./assets/Educacion/Logo SENA.jpg.crdownload" alt="">
+            <img src="./assets/Educacion/Logo Academlo.jpg" alt="">
         </div>
-        
-        <div id="contact">
-            <h4>Contacto</h4>
+        <button><a href="#top">Volver</a></button>
+    </section>
+    
+    <section id="proyects-section">
+        <div>
+            <h4 id="portafolio">Mi portafolio</h4>
         </div>
+
+        <div class="proyects">
+            <img src="./Portafolio 4/Logos- Imágenes/Group 47.jpg" alt="">
+            <img src="./Portafolio 4/Logos- Imágenes/image 4.jpg" alt="">
+            <img src="./Portafolio 4/Logos- Imágenes/Rectangle 53.jpg" alt="">
+            <img src="./Portafolio 4/Logos- Imágenes/Rectangle 65.jpg" alt="">
+        </div>
+        <button><a href="#top">Volver</a></button>
+    </section> 
+    
+    <section id="contact-section">
+        <div>
+            <h4 id="contacto">Contacto</h4>
+        </div>
+        <div class="icons-section">
+            <div class="icon-phone">
+                <img src="./Portafolio 4/íconos/phone 3.svg" alt="">
+                <h5>Número Móbil</h5>
+                <p>+57 3154488966</p>
+            </div>    
+            <div class="icon-email">
+                <img src="./Portafolio 4/íconos/mail 3.svg" alt="">
+                <h5>e-mail</h5>
+                <p>carloseduardovii@gmail.com</p>
+            </div>
+        </div>
+        <button><a href="#top">Volver</a></button>
     </section>
     <section></section>
     <aside></aside>
     <footer>
-        <h5>Hecho con Academlo</h5>
+        <h5>Hecho con <img src="https://img.icons8.com/ios-filled/50/4a90e2/heart-puzzle.png"/> en Academlo</h5>
     </footer>
 
-
-
-
-
-       
+    <script></script>       
 </body>
 </html>
